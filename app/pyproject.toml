@@ -1,15 +1,23 @@
 [tool.poetry]
 name = "storm-api"
 version = "1.0.0"
-description = "FastAPI wrapper for Stanford STORM"
-authors = ["Your Name <you@example.com>"]
+description = "FastAPI wrapper around Stanford STORM"
+authors = ["rvimittal@gmail.com"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.95.0"
-uvicorn = { extras = ["standard"], version = "^0.22.0" }
-pydantic = "^1.10.0"
-# Add other dependencies as needed
+fastapi = "^0.110"
+uvicorn = { extras = ["standard"], version = "^0.29.0" }
+pydantic = "^2.6.0"
+httpx = "^0.27.0"
+python-dotenv = "^1.0.1"
+pytest = "^8.0.0"
+knowledge_storm = "*"
+
+
+# Optional: If storm repo components are not pip-installable
+# You can also use `path = "../storm"` if using locally
 
 [build-system]
 requires = ["poetry-core"]
