@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "storm-api"
+version = "1.0.0"
+description = "FastAPI wrapper for Stanford STORM"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.0"
+uvicorn = { extras = ["standard"], version = "^0.22.0" }
+pydantic = "^1.10.0"
+# Add other dependencies as needed
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
