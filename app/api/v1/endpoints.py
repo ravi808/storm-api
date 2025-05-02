@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from api.v1.schemas import TopicInput, TopicResponse
-from core.pipeline_manager import STORMPipelineManager
+from models.schemas import TopicInput, TopicResponse
+from core.pipeline_manager import storm_pipeline_manager
 from utils.logger import setup_logger
 
 router = APIRouter(prefix="/v1", tags=["STORM"])
 
 logger = setup_logger(__name__)
-pipeline_manager = STORMPipelineManager()
+
 
 @router.post("/generate-outline", response_model=TopicResponse)
 async def generate_outline(payload: TopicInput):
@@ -25,7 +25,7 @@ async def generate_outline(payload: TopicInput):
     
     try:
         logger.info(f"Generating outline for topic: {topic}")
-        result = pipeline_manager.run_pipeline(topic)
+        result = storm_pipeline_manager.run_pipeline(topic)
         return {"topic": topic, "outline": result}
     except Exception as e:
         logger.error(f"Pipeline error: {str(e)}")

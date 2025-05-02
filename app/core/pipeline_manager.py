@@ -75,3 +75,6 @@ class STORMPipelineManager:
         runner.post_run()
 
         return runner.summary()
+
+
+storm_pipeline_manager = STORMPipelineManager()
