@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models.schemas import TopicInput, TopicResponse
+from models.v1.schemas import TopicInput, TopicResponse
 from core.pipeline_manager import storm_pipeline_manager
 from utils.logger import setup_logger
 

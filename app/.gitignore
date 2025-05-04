@@ -1,7 +1,43 @@
-*__pycache__
-.env
-*.env
-.venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+env/
 venv/
-.venv311
-venv311/
+
+# Poetry
+poetry.lock
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# Mypy / Pylint / Coverage
+.mypy_cache/
+coverage.xml
+htmlcov/
+
+# PyInstaller
+*.spec
+build/
+dist/
+
+# Docker
+*.log
+*.pid
+*.pid.lock
+docker-compose.override.yml
+
+# Mac / Linux / Windows junk
+.DS_Store
+Thumbs.db
